@@ -1,0 +1,77 @@
+:root {
+  --border-tab: #000;
+
+  --tab-link {
+    background-color: #999;
+    color: #fff;
+  }
+  --tab-link-active {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 1px #fff;
+  }
+  --tab-link-hover {
+    background-color: #777;
+    color: #fff;
+    box-shadow: 0 1px #777;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font: 18px/1.2 Arial, Helvetica, sans-serif;
+}
+
+.wr-tab-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tabs-links {
+  text-align: center;
+  border-bottom: 1px solid var(--border-tab);
+}
+
+.tabs-links li {
+  display: inline-block;
+  text-align: center;
+  border-top: 1px solid var(--border-tab);
+  border-left: 1px solid var(--border-tab);
+  &:last-child {
+    border-right: 1px solid var(--border-tab);
+  }
+}
+
+.tabs-links a {
+  text-transform: capitalize;
+  display: block;
+  padding: 5px 20px;
+  transition: all .3s;
+  @apply --tab-link;
+}
+
+.tabs-links a:hover {
+  @apply --tab-link-hover;
+}
+
+.tabs-links .active {
+  @apply --tab-link-active;
+}
+.tabs-item {
+  display: none;
+  text-align: center;
+  padding: 10px;
+}
+
+.tabs-item.active {
+  display: block;
+}
